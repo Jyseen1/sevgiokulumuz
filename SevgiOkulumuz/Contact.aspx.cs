@@ -14,7 +14,7 @@ namespace SevgiOkulumuz
         {
 
         }
-
+        //asodmdg
         protected void btnSend_Click(object sender, EventArgs e)
         {
             //this will enable TLS v 1.1 and 1.2
