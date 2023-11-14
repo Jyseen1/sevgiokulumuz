@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SevgiOkulumuz.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title><%: Page.Title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="PoyrazT">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/sevgiwebicon.jpg">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Sub Header -->
+        <div class="sub-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-sm-8">
+                        <div class="left-content">
+                            <p>SEVGI OKULUMUZ <em>SEVGI OKULUMUZ</em> <3 </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="right-icons">
+                            <ul>
+                                <li><a href="https://www.instagram.com/sevgiokulumuz/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-"></i></a></li>
+                                <li><a href="#"><i class="fa fa-"></i></a></li>
+                                <li><a href="#"><i class="fa fa-"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <asp:LinkButton ID="LinkButton1" CssClass="logo"  runat="server" PostBackUrl="~/Default.aspx">SEVGİ OKULUMUZ</asp:LinkButton>
+                            <!-- ***** Logo End ***** -->
+
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li class="scroll-to-section"><a href="Default.aspx" class="active">Ana Sayfa</a></li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Meetings.aspx">Kamplar</asp:HyperLink>
+                                </li>
+                                <li class="scroll-to-section"><a href="#apply">ŞİMDİ BAŞLA</a></li>
+
+
+                                <li class="scroll-to-section">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Contact.aspx" Target="_blank">İLETİŞİME GEÇ</asp:HyperLink>
+                                </li>
+                            </ul>
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ***** Header Area End ***** -->
+
+        <!-- ***** Main Banner Area Start ***** -->
+        <section class="section main-banner" id="top" data-section="section1">
+            <video autoplay muted loop id="bg-video">
+                <source src="assets/images/sevideo2.mp4" type="video/mp4" />
+            </video>
+
+            <div class="video-overlay header-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="caption">
+                                <h6>HOŞGELDİNİZ</h6>
+                                <h2>SEVGİ OKULUMUZA HOŞGELDİNİZ...</h2>
+                                <p>Her şey sizinle başlar.Dünyanın değişmesini mi istiyorsunuz? Önce kendi dünyanızı değiştirin.</p>
+                                <div class="main-button-red">
+                                    <div class="scroll-to-section"><a href="Contact.aspx">ARAMIZA KATIL!</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Main Banner Area End ***** -->
+
+        <div class="container body-content">
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2023 Sevgi Okulumuz, Ltd. All Rights Reserved. 
+              <br>
+                Design: <a href="https://www.instagram.com/pasrl.8/" target="_blank" title="free css templates">Poyraz Tüfekçier</a>
+            </p>
+        </div>
+    </form>
+
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+            var
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
+            }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function () {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                        siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+            e.preventDefault();
+            showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+            checkSection();
+        });
+    </script>
+</body>
+</html>
