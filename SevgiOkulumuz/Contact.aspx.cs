@@ -19,7 +19,7 @@ namespace SevgiOkulumuz
         {
             //this will enable TLS v 1.1 and 1.2
             System.Net.ServicePointManager.SecurityProtocol = (System.Net.SecurityProtocolType)(768 | 3072);
-
+            // deneme
             try
             {
                 MailMessage message = new MailMessage();
